@@ -86,18 +86,18 @@
       "type": "event"
     }
   ],
-  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820b86a44c1ec9d58dadb7519b95428118810f60788a78e2f8734f389167b14b2710029",
-  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820b86a44c1ec9d58dadb7519b95428118810f60788a78e2f8734f389167b14b2710029",
-  "sourceMap": "117:230:13:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "117:230:13:-;;;;;",
-  "source": "pragma solidity ^0.4.18;\n\n/*\n    A contract you can inherit from that has some useful Events to print statements.\n*/\ncontract Debug {\n  event LogAddress(address _msg);\n  event LogInt(int _msg);\n  event LogString(string _msg);\n  event LogUint(uint _msg);\n  event LogBytes(bytes _msg);\n  event LogBytes32(bytes32 _msg);\n  event LogBool(bool _msg);\n}\n",
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820249d622bd713f8f2f14935744cd64e8bdae7a9750ba91e1bc77a2b2a2c90c0b40029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820249d622bd713f8f2f14935744cd64e8bdae7a9750ba91e1bc77a2b2a2c90c0b40029",
+  "sourceMap": "119:244:13:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "119:244:13:-;;;;;",
+  "source": "pragma solidity ^0.4.18;\n\n\n/*\n    A contract you can inherit from that has some useful Events to print statements.\n*/\n\ncontract Debug {\n    event LogAddress(address _msg);\n    event LogInt(int _msg);\n    event LogString(string _msg);\n    event LogUint(uint _msg);\n    event LogBytes(bytes _msg);\n    event LogBytes32(bytes32 _msg);\n    event LogBool(bool _msg);\n}\n",
   "sourcePath": "/Users/tibet/Dev/Emergence/daostack/contracts/test/Debug.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/tibet/Dev/Emergence/daostack/contracts/test/Debug.sol",
       "exportedSymbols": {
         "Debug": [
-          5674
+          5694
         ]
       }
     },
@@ -111,7 +111,7 @@
             ".18"
           ]
         },
-        "id": 5645,
+        "id": 5665,
         "name": "PragmaDirective",
         "src": "0:24:13"
       },
@@ -127,10 +127,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            5674
+            5694
           ],
           "name": "Debug",
-          "scope": 5675
+          "scope": 5695
         },
         "children": [
           {
@@ -146,7 +146,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5649,
+                      "scope": 5669,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -159,24 +159,24 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 5646,
+                        "id": 5666,
                         "name": "ElementaryTypeName",
-                        "src": "153:7:13"
+                        "src": "157:7:13"
                       }
                     ],
-                    "id": 5647,
+                    "id": 5667,
                     "name": "VariableDeclaration",
-                    "src": "153:12:13"
+                    "src": "157:12:13"
                   }
                 ],
-                "id": 5648,
+                "id": 5668,
                 "name": "ParameterList",
-                "src": "152:14:13"
+                "src": "156:14:13"
               }
             ],
-            "id": 5649,
+            "id": 5669,
             "name": "EventDefinition",
-            "src": "136:31:13"
+            "src": "140:31:13"
           },
           {
             "attributes": {
@@ -191,7 +191,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5653,
+                      "scope": 5673,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "int256",
@@ -204,24 +204,24 @@
                           "name": "int",
                           "type": "int256"
                         },
-                        "id": 5650,
+                        "id": 5670,
                         "name": "ElementaryTypeName",
-                        "src": "183:3:13"
+                        "src": "189:3:13"
                       }
                     ],
-                    "id": 5651,
+                    "id": 5671,
                     "name": "VariableDeclaration",
-                    "src": "183:8:13"
+                    "src": "189:8:13"
                   }
                 ],
-                "id": 5652,
+                "id": 5672,
                 "name": "ParameterList",
-                "src": "182:10:13"
+                "src": "188:10:13"
               }
             ],
-            "id": 5653,
+            "id": 5673,
             "name": "EventDefinition",
-            "src": "170:23:13"
+            "src": "176:23:13"
           },
           {
             "attributes": {
@@ -236,7 +236,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5657,
+                      "scope": 5677,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -249,24 +249,24 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 5654,
+                        "id": 5674,
                         "name": "ElementaryTypeName",
-                        "src": "212:6:13"
+                        "src": "220:6:13"
                       }
                     ],
-                    "id": 5655,
+                    "id": 5675,
                     "name": "VariableDeclaration",
-                    "src": "212:11:13"
+                    "src": "220:11:13"
                   }
                 ],
-                "id": 5656,
+                "id": 5676,
                 "name": "ParameterList",
-                "src": "211:13:13"
+                "src": "219:13:13"
               }
             ],
-            "id": 5657,
+            "id": 5677,
             "name": "EventDefinition",
-            "src": "196:29:13"
+            "src": "204:29:13"
           },
           {
             "attributes": {
@@ -281,7 +281,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5661,
+                      "scope": 5681,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -294,24 +294,24 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 5658,
+                        "id": 5678,
                         "name": "ElementaryTypeName",
-                        "src": "242:4:13"
+                        "src": "252:4:13"
                       }
                     ],
-                    "id": 5659,
+                    "id": 5679,
                     "name": "VariableDeclaration",
-                    "src": "242:9:13"
+                    "src": "252:9:13"
                   }
                 ],
-                "id": 5660,
+                "id": 5680,
                 "name": "ParameterList",
-                "src": "241:11:13"
+                "src": "251:11:13"
               }
             ],
-            "id": 5661,
+            "id": 5681,
             "name": "EventDefinition",
-            "src": "228:25:13"
+            "src": "238:25:13"
           },
           {
             "attributes": {
@@ -326,7 +326,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5665,
+                      "scope": 5685,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes memory",
@@ -339,24 +339,24 @@
                           "name": "bytes",
                           "type": "bytes storage pointer"
                         },
-                        "id": 5662,
+                        "id": 5682,
                         "name": "ElementaryTypeName",
-                        "src": "271:5:13"
+                        "src": "283:5:13"
                       }
                     ],
-                    "id": 5663,
+                    "id": 5683,
                     "name": "VariableDeclaration",
-                    "src": "271:10:13"
+                    "src": "283:10:13"
                   }
                 ],
-                "id": 5664,
+                "id": 5684,
                 "name": "ParameterList",
-                "src": "270:12:13"
+                "src": "282:12:13"
               }
             ],
-            "id": 5665,
+            "id": 5685,
             "name": "EventDefinition",
-            "src": "256:27:13"
+            "src": "268:27:13"
           },
           {
             "attributes": {
@@ -371,7 +371,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5669,
+                      "scope": 5689,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -384,24 +384,24 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 5666,
+                        "id": 5686,
                         "name": "ElementaryTypeName",
-                        "src": "303:7:13"
+                        "src": "317:7:13"
                       }
                     ],
-                    "id": 5667,
+                    "id": 5687,
                     "name": "VariableDeclaration",
-                    "src": "303:12:13"
+                    "src": "317:12:13"
                   }
                 ],
-                "id": 5668,
+                "id": 5688,
                 "name": "ParameterList",
-                "src": "302:14:13"
+                "src": "316:14:13"
               }
             ],
-            "id": 5669,
+            "id": 5689,
             "name": "EventDefinition",
-            "src": "286:31:13"
+            "src": "300:31:13"
           },
           {
             "attributes": {
@@ -416,7 +416,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_msg",
-                      "scope": 5673,
+                      "scope": 5693,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -429,34 +429,34 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 5670,
+                        "id": 5690,
                         "name": "ElementaryTypeName",
-                        "src": "334:4:13"
+                        "src": "350:4:13"
                       }
                     ],
-                    "id": 5671,
+                    "id": 5691,
                     "name": "VariableDeclaration",
-                    "src": "334:9:13"
+                    "src": "350:9:13"
                   }
                 ],
-                "id": 5672,
+                "id": 5692,
                 "name": "ParameterList",
-                "src": "333:11:13"
+                "src": "349:11:13"
               }
             ],
-            "id": 5673,
+            "id": 5693,
             "name": "EventDefinition",
-            "src": "320:25:13"
+            "src": "336:25:13"
           }
         ],
-        "id": 5674,
+        "id": 5694,
         "name": "ContractDefinition",
-        "src": "117:230:13"
+        "src": "119:244:13"
       }
     ],
-    "id": 5675,
+    "id": 5695,
     "name": "SourceUnit",
-    "src": "0:348:13"
+    "src": "0:364:13"
   },
   "compiler": {
     "name": "solc",
@@ -464,5 +464,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-23T00:21:01.771Z"
+  "updatedAt": "2017-12-08T01:15:38.722Z"
 }

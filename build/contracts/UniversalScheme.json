@@ -154,14 +154,14 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.15;\n\nimport \"./UniversalSchemeInterface.sol\";\nimport \"../controller/Controller.sol\";\nimport \"../controller/Avatar.sol\";\nimport \"zeppelin-solidity/contracts/ownership/Ownable.sol\";\nimport \"zeppelin-solidity/contracts/token/StandardToken.sol\";\n\n\ncontract UniversalScheme is Ownable, UniversalSchemeInterface { //\n  StandardToken public nativeToken;\n  uint public fee;\n  address public beneficiary;\n  bytes32 public hashedParameters; // For other parameters.\n\n  event LogOrgRegistered (address _avatar);\n  event LogNewProposal(bytes32 proposalId);\n\n  function updateParameters(\n    StandardToken _nativeToken,\n    uint _fee,\n    address _beneficiary,\n    bytes32 _hashedParameters\n  )\n    public\n    onlyOwner\n  {\n    nativeToken = _nativeToken;\n    fee = _fee;\n    beneficiary = _beneficiary;\n    hashedParameters = _hashedParameters;\n  }\n\n  /**\n   *  @dev get the parameters for the current scheme from the controller\n   */\n  function getParametersFromController(Avatar _avatar) internal constant returns(bytes32) {\n     Controller controller = Controller(_avatar.owner());\n     return controller.getSchemeParameters(this);\n  }\n\n}\n",
+  "source": "pragma solidity ^0.4.15;\n\nimport \"./UniversalSchemeInterface.sol\";\nimport \"../controller/Controller.sol\";\nimport \"../controller/Avatar.sol\";\nimport \"zeppelin-solidity/contracts/ownership/Ownable.sol\";\nimport \"zeppelin-solidity/contracts/token/StandardToken.sol\";\n\n\ncontract UniversalScheme is Ownable, UniversalSchemeInterface { //\n    StandardToken public nativeToken;\n    uint public fee;\n    address public beneficiary;\n    bytes32 public hashedParameters; // For other parameters.\n\n    event LogOrgRegistered (address _avatar);\n    event LogNewProposal(bytes32 proposalId);\n\n    function updateParameters(\n        StandardToken _nativeToken,\n        uint _fee,\n        address _beneficiary,\n        bytes32 _hashedParameters\n    )\n        public\n        onlyOwner\n    {\n        nativeToken = _nativeToken;\n        fee = _fee;\n        beneficiary = _beneficiary;\n        hashedParameters = _hashedParameters;\n    }\n\n    /**\n    *  @dev get the parameters for the current scheme from the controller\n    */\n    function getParametersFromController(Avatar _avatar) internal constant returns(bytes32) {\n        Controller controller = Controller(_avatar.owner());\n        return controller.getSchemeParameters(this);\n    }\n\n}\n",
   "sourcePath": "/Users/tibet/Dev/Emergence/daostack/contracts/universalSchemes/UniversalScheme.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/tibet/Dev/Emergence/daostack/contracts/universalSchemes/UniversalScheme.sol",
       "exportedSymbols": {
         "UniversalScheme": [
-          2120
+          8624
         ]
       }
     },
@@ -175,101 +175,101 @@
             ".15"
           ]
         },
-        "id": 2043,
+        "id": 8547,
         "name": "PragmaDirective",
-        "src": "0:24:8"
+        "src": "0:24:22"
       },
       {
         "attributes": {
-          "SourceUnit": 2151,
+          "SourceUnit": 8655,
           "absolutePath": "/Users/tibet/Dev/Emergence/daostack/contracts/universalSchemes/UniversalSchemeInterface.sol",
           "file": "./UniversalSchemeInterface.sol",
-          "scope": 2121,
+          "scope": 8625,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2044,
+        "id": 8548,
         "name": "ImportDirective",
-        "src": "26:40:8"
+        "src": "26:40:22"
       },
       {
         "attributes": {
-          "SourceUnit": 1243,
+          "SourceUnit": 3903,
           "absolutePath": "/Users/tibet/Dev/Emergence/daostack/contracts/controller/Controller.sol",
           "file": "../controller/Controller.sol",
-          "scope": 2121,
+          "scope": 8625,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2045,
+        "id": 8549,
         "name": "ImportDirective",
-        "src": "67:38:8"
+        "src": "67:38:22"
       },
       {
         "attributes": {
-          "SourceUnit": 404,
+          "SourceUnit": 3064,
           "absolutePath": "/Users/tibet/Dev/Emergence/daostack/contracts/controller/Avatar.sol",
           "file": "../controller/Avatar.sol",
-          "scope": 2121,
+          "scope": 8625,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2046,
+        "id": 8550,
         "name": "ImportDirective",
-        "src": "106:34:8"
+        "src": "106:34:22"
       },
       {
         "attributes": {
-          "SourceUnit": 2889,
+          "SourceUnit": 11117,
           "absolutePath": "zeppelin-solidity/contracts/ownership/Ownable.sol",
           "file": "zeppelin-solidity/contracts/ownership/Ownable.sol",
-          "scope": 2121,
+          "scope": 8625,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2047,
+        "id": 8551,
         "name": "ImportDirective",
-        "src": "141:59:8"
+        "src": "141:59:22"
       },
       {
         "attributes": {
-          "SourceUnit": 3253,
+          "SourceUnit": 11481,
           "absolutePath": "zeppelin-solidity/contracts/token/StandardToken.sol",
           "file": "zeppelin-solidity/contracts/token/StandardToken.sol",
-          "scope": 2121,
+          "scope": 8625,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2048,
+        "id": 8552,
         "name": "ImportDirective",
-        "src": "201:61:8"
+        "src": "201:61:22"
       },
       {
         "attributes": {
           "contractDependencies": [
-            2150,
-            2888
+            8654,
+            11116
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            2120,
-            2150,
-            2888
+            8624,
+            8654,
+            11116
           ],
           "name": "UniversalScheme",
-          "scope": 2121
+          "scope": 8625
         },
         "children": [
           {
@@ -283,17 +283,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Ownable",
-                  "referencedDeclaration": 2888,
+                  "referencedDeclaration": 11116,
                   "type": "contract Ownable"
                 },
-                "id": 2049,
+                "id": 8553,
                 "name": "UserDefinedTypeName",
-                "src": "293:7:8"
+                "src": "293:7:22"
               }
             ],
-            "id": 2050,
+            "id": 8554,
             "name": "InheritanceSpecifier",
-            "src": "293:7:8"
+            "src": "293:7:22"
           },
           {
             "attributes": {
@@ -306,23 +306,23 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "UniversalSchemeInterface",
-                  "referencedDeclaration": 2150,
+                  "referencedDeclaration": 8654,
                   "type": "contract UniversalSchemeInterface"
                 },
-                "id": 2051,
+                "id": 8555,
                 "name": "UserDefinedTypeName",
-                "src": "302:24:8"
+                "src": "302:24:22"
               }
             ],
-            "id": 2052,
+            "id": 8556,
             "name": "InheritanceSpecifier",
-            "src": "302:24:8"
+            "src": "302:24:22"
           },
           {
             "attributes": {
               "constant": false,
               "name": "nativeToken",
-              "scope": 2120,
+              "scope": 8624,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "contract StandardToken",
@@ -334,23 +334,23 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "StandardToken",
-                  "referencedDeclaration": 3252,
+                  "referencedDeclaration": 11480,
                   "type": "contract StandardToken"
                 },
-                "id": 2053,
+                "id": 8557,
                 "name": "UserDefinedTypeName",
-                "src": "334:13:8"
+                "src": "336:13:22"
               }
             ],
-            "id": 2054,
+            "id": 8558,
             "name": "VariableDeclaration",
-            "src": "334:32:8"
+            "src": "336:32:22"
           },
           {
             "attributes": {
               "constant": false,
               "name": "fee",
-              "scope": 2120,
+              "scope": 8624,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -363,20 +363,20 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 2055,
+                "id": 8559,
                 "name": "ElementaryTypeName",
-                "src": "370:4:8"
+                "src": "374:4:22"
               }
             ],
-            "id": 2056,
+            "id": 8560,
             "name": "VariableDeclaration",
-            "src": "370:15:8"
+            "src": "374:15:22"
           },
           {
             "attributes": {
               "constant": false,
               "name": "beneficiary",
-              "scope": 2120,
+              "scope": 8624,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -389,20 +389,20 @@
                   "name": "address",
                   "type": "address"
                 },
-                "id": 2057,
+                "id": 8561,
                 "name": "ElementaryTypeName",
-                "src": "389:7:8"
+                "src": "395:7:22"
               }
             ],
-            "id": 2058,
+            "id": 8562,
             "name": "VariableDeclaration",
-            "src": "389:26:8"
+            "src": "395:26:22"
           },
           {
             "attributes": {
               "constant": false,
               "name": "hashedParameters",
-              "scope": 2120,
+              "scope": 8624,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "bytes32",
@@ -415,14 +415,14 @@
                   "name": "bytes32",
                   "type": "bytes32"
                 },
-                "id": 2059,
+                "id": 8563,
                 "name": "ElementaryTypeName",
-                "src": "419:7:8"
+                "src": "427:7:22"
               }
             ],
-            "id": 2060,
+            "id": 8564,
             "name": "VariableDeclaration",
-            "src": "419:31:8"
+            "src": "427:31:22"
           },
           {
             "attributes": {
@@ -437,7 +437,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_avatar",
-                      "scope": 2064,
+                      "scope": 8568,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -450,24 +450,24 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 2061,
+                        "id": 8565,
                         "name": "ElementaryTypeName",
-                        "src": "504:7:8"
+                        "src": "514:7:22"
                       }
                     ],
-                    "id": 2062,
+                    "id": 8566,
                     "name": "VariableDeclaration",
-                    "src": "504:15:8"
+                    "src": "514:15:22"
                   }
                 ],
-                "id": 2063,
+                "id": 8567,
                 "name": "ParameterList",
-                "src": "503:17:8"
+                "src": "513:17:22"
               }
             ],
-            "id": 2064,
+            "id": 8568,
             "name": "EventDefinition",
-            "src": "480:41:8"
+            "src": "490:41:22"
           },
           {
             "attributes": {
@@ -482,7 +482,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "proposalId",
-                      "scope": 2068,
+                      "scope": 8572,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -495,24 +495,24 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2065,
+                        "id": 8569,
                         "name": "ElementaryTypeName",
-                        "src": "545:7:8"
+                        "src": "557:7:22"
                       }
                     ],
-                    "id": 2066,
+                    "id": 8570,
                     "name": "VariableDeclaration",
-                    "src": "545:18:8"
+                    "src": "557:18:22"
                   }
                 ],
-                "id": 2067,
+                "id": 8571,
                 "name": "ParameterList",
-                "src": "544:20:8"
+                "src": "556:20:22"
               }
             ],
-            "id": 2068,
+            "id": 8572,
             "name": "EventDefinition",
-            "src": "524:41:8"
+            "src": "536:41:22"
           },
           {
             "attributes": {
@@ -521,9 +521,9 @@
               "isConstructor": false,
               "name": "updateParameters",
               "payable": false,
-              "scope": 2120,
+              "scope": 8624,
               "stateMutability": "nonpayable",
-              "superFunction": 2137,
+              "superFunction": 8641,
               "visibility": "public"
             },
             "children": [
@@ -533,7 +533,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_nativeToken",
-                      "scope": 2098,
+                      "scope": 8602,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract StandardToken",
@@ -545,23 +545,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "StandardToken",
-                          "referencedDeclaration": 3252,
+                          "referencedDeclaration": 11480,
                           "type": "contract StandardToken"
                         },
-                        "id": 2069,
+                        "id": 8573,
                         "name": "UserDefinedTypeName",
-                        "src": "600:13:8"
+                        "src": "618:13:22"
                       }
                     ],
-                    "id": 2070,
+                    "id": 8574,
                     "name": "VariableDeclaration",
-                    "src": "600:26:8"
+                    "src": "618:26:22"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_fee",
-                      "scope": 2098,
+                      "scope": 8602,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -574,20 +574,20 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 2071,
+                        "id": 8575,
                         "name": "ElementaryTypeName",
-                        "src": "632:4:8"
+                        "src": "654:4:22"
                       }
                     ],
-                    "id": 2072,
+                    "id": 8576,
                     "name": "VariableDeclaration",
-                    "src": "632:9:8"
+                    "src": "654:9:22"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_beneficiary",
-                      "scope": 2098,
+                      "scope": 8602,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -600,20 +600,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 2073,
+                        "id": 8577,
                         "name": "ElementaryTypeName",
-                        "src": "647:7:8"
+                        "src": "673:7:22"
                       }
                     ],
-                    "id": 2074,
+                    "id": 8578,
                     "name": "VariableDeclaration",
-                    "src": "647:20:8"
+                    "src": "673:20:22"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_hashedParameters",
-                      "scope": 2098,
+                      "scope": 8602,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -626,19 +626,19 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2075,
+                        "id": 8579,
                         "name": "ElementaryTypeName",
-                        "src": "673:7:8"
+                        "src": "703:7:22"
                       }
                     ],
-                    "id": 2076,
+                    "id": 8580,
                     "name": "VariableDeclaration",
-                    "src": "673:25:8"
+                    "src": "703:25:22"
                   }
                 ],
-                "id": 2077,
+                "id": 8581,
                 "name": "ParameterList",
-                "src": "594:108:8"
+                "src": "608:126:22"
               },
               {
                 "attributes": {
@@ -647,9 +647,9 @@
                   ]
                 },
                 "children": [],
-                "id": 2080,
+                "id": 8584,
                 "name": "ParameterList",
-                "src": "730:0:8"
+                "src": "772:0:22"
               },
               {
                 "attributes": {
@@ -664,18 +664,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 2868,
+                      "referencedDeclaration": 11096,
                       "type": "modifier ()",
                       "value": "onlyOwner"
                     },
-                    "id": 2078,
+                    "id": 8582,
                     "name": "Identifier",
-                    "src": "718:9:8"
+                    "src": "758:9:22"
                   }
                 ],
-                "id": 2079,
+                "id": 8583,
                 "name": "ModifierInvocation",
-                "src": "718:9:8"
+                "src": "758:9:22"
               },
               {
                 "children": [
@@ -698,13 +698,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2054,
+                              "referencedDeclaration": 8558,
                               "type": "contract StandardToken",
                               "value": "nativeToken"
                             },
-                            "id": 2081,
+                            "id": 8585,
                             "name": "Identifier",
-                            "src": "736:11:8"
+                            "src": "782:11:22"
                           },
                           {
                             "attributes": {
@@ -712,23 +712,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2070,
+                              "referencedDeclaration": 8574,
                               "type": "contract StandardToken",
                               "value": "_nativeToken"
                             },
-                            "id": 2082,
+                            "id": 8586,
                             "name": "Identifier",
-                            "src": "750:12:8"
+                            "src": "796:12:22"
                           }
                         ],
-                        "id": 2083,
+                        "id": 8587,
                         "name": "Assignment",
-                        "src": "736:26:8"
+                        "src": "782:26:22"
                       }
                     ],
-                    "id": 2084,
+                    "id": 8588,
                     "name": "ExpressionStatement",
-                    "src": "736:26:8"
+                    "src": "782:26:22"
                   },
                   {
                     "children": [
@@ -749,13 +749,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2056,
+                              "referencedDeclaration": 8560,
                               "type": "uint256",
                               "value": "fee"
                             },
-                            "id": 2085,
+                            "id": 8589,
                             "name": "Identifier",
-                            "src": "768:3:8"
+                            "src": "818:3:22"
                           },
                           {
                             "attributes": {
@@ -763,23 +763,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2072,
+                              "referencedDeclaration": 8576,
                               "type": "uint256",
                               "value": "_fee"
                             },
-                            "id": 2086,
+                            "id": 8590,
                             "name": "Identifier",
-                            "src": "774:4:8"
+                            "src": "824:4:22"
                           }
                         ],
-                        "id": 2087,
+                        "id": 8591,
                         "name": "Assignment",
-                        "src": "768:10:8"
+                        "src": "818:10:22"
                       }
                     ],
-                    "id": 2088,
+                    "id": 8592,
                     "name": "ExpressionStatement",
-                    "src": "768:10:8"
+                    "src": "818:10:22"
                   },
                   {
                     "children": [
@@ -800,13 +800,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2058,
+                              "referencedDeclaration": 8562,
                               "type": "address",
                               "value": "beneficiary"
                             },
-                            "id": 2089,
+                            "id": 8593,
                             "name": "Identifier",
-                            "src": "784:11:8"
+                            "src": "838:11:22"
                           },
                           {
                             "attributes": {
@@ -814,23 +814,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2074,
+                              "referencedDeclaration": 8578,
                               "type": "address",
                               "value": "_beneficiary"
                             },
-                            "id": 2090,
+                            "id": 8594,
                             "name": "Identifier",
-                            "src": "798:12:8"
+                            "src": "852:12:22"
                           }
                         ],
-                        "id": 2091,
+                        "id": 8595,
                         "name": "Assignment",
-                        "src": "784:26:8"
+                        "src": "838:26:22"
                       }
                     ],
-                    "id": 2092,
+                    "id": 8596,
                     "name": "ExpressionStatement",
-                    "src": "784:26:8"
+                    "src": "838:26:22"
                   },
                   {
                     "children": [
@@ -851,13 +851,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2060,
+                              "referencedDeclaration": 8564,
                               "type": "bytes32",
                               "value": "hashedParameters"
                             },
-                            "id": 2093,
+                            "id": 8597,
                             "name": "Identifier",
-                            "src": "816:16:8"
+                            "src": "874:16:22"
                           },
                           {
                             "attributes": {
@@ -865,33 +865,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2076,
+                              "referencedDeclaration": 8580,
                               "type": "bytes32",
                               "value": "_hashedParameters"
                             },
-                            "id": 2094,
+                            "id": 8598,
                             "name": "Identifier",
-                            "src": "835:17:8"
+                            "src": "893:17:22"
                           }
                         ],
-                        "id": 2095,
+                        "id": 8599,
                         "name": "Assignment",
-                        "src": "816:36:8"
+                        "src": "874:36:22"
                       }
                     ],
-                    "id": 2096,
+                    "id": 8600,
                     "name": "ExpressionStatement",
-                    "src": "816:36:8"
+                    "src": "874:36:22"
                   }
                 ],
-                "id": 2097,
+                "id": 8601,
                 "name": "Block",
-                "src": "730:127:8"
+                "src": "772:145:22"
               }
             ],
-            "id": 2098,
+            "id": 8602,
             "name": "FunctionDefinition",
-            "src": "569:288:8"
+            "src": "583:334:22"
           },
           {
             "attributes": {
@@ -903,9 +903,9 @@
               ],
               "name": "getParametersFromController",
               "payable": false,
-              "scope": 2120,
+              "scope": 8624,
               "stateMutability": "view",
-              "superFunction": 2144,
+              "superFunction": 8653,
               "visibility": "internal"
             },
             "children": [
@@ -915,7 +915,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_avatar",
-                      "scope": 2119,
+                      "scope": 8623,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract Avatar",
@@ -927,22 +927,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "Avatar",
-                          "referencedDeclaration": 403,
+                          "referencedDeclaration": 3063,
                           "type": "contract Avatar"
                         },
-                        "id": 2099,
+                        "id": 8603,
                         "name": "UserDefinedTypeName",
-                        "src": "983:6:8"
+                        "src": "1049:6:22"
                       }
                     ],
-                    "id": 2100,
+                    "id": 8604,
                     "name": "VariableDeclaration",
-                    "src": "983:14:8"
+                    "src": "1049:14:22"
                   }
                 ],
-                "id": 2101,
+                "id": 8605,
                 "name": "ParameterList",
-                "src": "982:16:8"
+                "src": "1048:16:22"
               },
               {
                 "children": [
@@ -950,7 +950,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 2119,
+                      "scope": 8623,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -963,26 +963,26 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2102,
+                        "id": 8606,
                         "name": "ElementaryTypeName",
-                        "src": "1025:7:8"
+                        "src": "1091:7:22"
                       }
                     ],
-                    "id": 2103,
+                    "id": 8607,
                     "name": "VariableDeclaration",
-                    "src": "1025:7:8"
+                    "src": "1091:7:22"
                   }
                 ],
-                "id": 2104,
+                "id": 8608,
                 "name": "ParameterList",
-                "src": "1024:9:8"
+                "src": "1090:9:22"
               },
               {
                 "children": [
                   {
                     "attributes": {
                       "assignments": [
-                        2106
+                        8610
                       ]
                     },
                     "children": [
@@ -990,7 +990,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "controller",
-                          "scope": 2119,
+                          "scope": 8623,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "contract Controller",
@@ -1002,17 +1002,17 @@
                             "attributes": {
                               "contractScope": null,
                               "name": "Controller",
-                              "referencedDeclaration": 1242,
+                              "referencedDeclaration": 3902,
                               "type": "contract Controller"
                             },
-                            "id": 2105,
+                            "id": 8609,
                             "name": "UserDefinedTypeName",
-                            "src": "1041:10:8"
+                            "src": "1110:10:22"
                           }
                         ],
-                        "id": 2106,
+                        "id": 8610,
                         "name": "VariableDeclaration",
-                        "src": "1041:21:8"
+                        "src": "1110:21:22"
                       },
                       {
                         "attributes": {
@@ -1040,13 +1040,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1242,
+                              "referencedDeclaration": 3902,
                               "type": "type(contract Controller)",
                               "value": "Controller"
                             },
-                            "id": 2107,
+                            "id": 8611,
                             "name": "Identifier",
-                            "src": "1065:10:8"
+                            "src": "1134:10:22"
                           },
                           {
                             "attributes": {
@@ -1076,7 +1076,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "owner",
-                                  "referencedDeclaration": 2848,
+                                  "referencedDeclaration": 11076,
                                   "type": "function () view external returns (address)"
                                 },
                                 "children": [
@@ -1086,37 +1086,37 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2100,
+                                      "referencedDeclaration": 8604,
                                       "type": "contract Avatar",
                                       "value": "_avatar"
                                     },
-                                    "id": 2108,
+                                    "id": 8612,
                                     "name": "Identifier",
-                                    "src": "1076:7:8"
+                                    "src": "1145:7:22"
                                   }
                                 ],
-                                "id": 2109,
+                                "id": 8613,
                                 "name": "MemberAccess",
-                                "src": "1076:13:8"
+                                "src": "1145:13:22"
                               }
                             ],
-                            "id": 2110,
+                            "id": 8614,
                             "name": "FunctionCall",
-                            "src": "1076:15:8"
+                            "src": "1145:15:22"
                           }
                         ],
-                        "id": 2111,
+                        "id": 8615,
                         "name": "FunctionCall",
-                        "src": "1065:27:8"
+                        "src": "1134:27:22"
                       }
                     ],
-                    "id": 2112,
+                    "id": 8616,
                     "name": "VariableDeclarationStatement",
-                    "src": "1041:51:8"
+                    "src": "1110:51:22"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 2104
+                      "functionReturnParameters": 8608
                     },
                     "children": [
                       {
@@ -1138,7 +1138,7 @@
                             "attributes": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_UniversalScheme_$2120",
+                                  "typeIdentifier": "t_contract$_UniversalScheme_$8624",
                                   "typeString": "contract UniversalScheme"
                                 }
                               ],
@@ -1147,7 +1147,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "getSchemeParameters",
-                              "referencedDeclaration": 923,
+                              "referencedDeclaration": 3583,
                               "type": "function (address) view external returns (bytes32)"
                             },
                             "children": [
@@ -1157,18 +1157,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2106,
+                                  "referencedDeclaration": 8610,
                                   "type": "contract Controller",
                                   "value": "controller"
                                 },
-                                "id": 2113,
+                                "id": 8617,
                                 "name": "Identifier",
-                                "src": "1106:10:8"
+                                "src": "1178:10:22"
                               }
                             ],
-                            "id": 2114,
+                            "id": 8618,
                             "name": "MemberAccess",
-                            "src": "1106:30:8"
+                            "src": "1178:30:22"
                           },
                           {
                             "attributes": {
@@ -1176,43 +1176,43 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3311,
+                              "referencedDeclaration": 11541,
                               "type": "contract UniversalScheme",
                               "value": "this"
                             },
-                            "id": 2115,
+                            "id": 8619,
                             "name": "Identifier",
-                            "src": "1137:4:8"
+                            "src": "1209:4:22"
                           }
                         ],
-                        "id": 2116,
+                        "id": 8620,
                         "name": "FunctionCall",
-                        "src": "1106:36:8"
+                        "src": "1178:36:22"
                       }
                     ],
-                    "id": 2117,
+                    "id": 8621,
                     "name": "Return",
-                    "src": "1099:43:8"
+                    "src": "1171:43:22"
                   }
                 ],
-                "id": 2118,
+                "id": 8622,
                 "name": "Block",
-                "src": "1034:113:8"
+                "src": "1100:121:22"
               }
             ],
-            "id": 2119,
+            "id": 8623,
             "name": "FunctionDefinition",
-            "src": "946:201:8"
+            "src": "1012:209:22"
           }
         ],
-        "id": 2120,
+        "id": 8624,
         "name": "ContractDefinition",
-        "src": "265:885:8"
+        "src": "265:959:22"
       }
     ],
-    "id": 2121,
+    "id": 8625,
     "name": "SourceUnit",
-    "src": "0:1151:8"
+    "src": "0:1225:22"
   },
   "compiler": {
     "name": "solc",
@@ -1220,5 +1220,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-12-01T22:18:40.998Z"
+  "updatedAt": "2017-12-08T01:15:38.768Z"
 }
